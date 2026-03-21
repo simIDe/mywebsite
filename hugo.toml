@@ -7,6 +7,8 @@ enableRobotsTXT = true
   description = "Data et pilotage pour les PMEs"
   author = "Simon Bastide"
   calendarURL = "https://calendar.app.google/rAskRjaNbP3C2a3Y6"
+  linkedinURL = "https://www.linkedin.com/in/simonbastide/"
+  githubURL   = "https://github.com/simIDe"
 
 [taxonomies]
 
