@@ -1,0 +1,14 @@
+baseURL = "https://simonbastide.com/"
+languageCode = "fr-FR"
+title = "Simon Bastide — Data Engineer"
+enableRobotsTXT = true
+
+[params]
+  description = "Data et pilotage pour les PMEs"
+  author = "Simon Bastide"
+  calendarURL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3WO_MNEUdekEDRLkYWVzHOaRiB7B0SWjLPPd0FIVYl0hS59LVizFfAmJ_BIDPyaWEFzDyaakLz"
+
+[taxonomies]
+
+[markup.goldmark.renderer]
+  unsafe = true
