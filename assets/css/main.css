@@ -243,6 +243,30 @@ body {
 .step__body h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
 .step__body p { color: var(--color-text-muted); font-size: 0.95rem; }
 
+/* ── Differentiators ── */
+.section--teal {
+  background: #e8f7f5;
+}
+.section--teal .section__label--light {
+  background: rgba(27,153,139,0.15);
+  color: var(--color-accent);
+}
+.diff-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.diff-card {
+  background: #fff;
+  border: 1px solid rgba(27,153,139,0.2);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+}
+.diff-card__icon { font-size: 1.75rem; margin-bottom: 16px; }
+.diff-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; color: var(--color-text); }
+.diff-card p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
+
 /* ── About ── */
 .about {
   display: grid;
