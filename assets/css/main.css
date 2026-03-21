@@ -6,8 +6,8 @@
   --color-bg-alt:   #f7f8fc;
   --color-text:     #1a1a2e;
   --color-text-muted: #5f6b7c;
-  --color-accent:   #2563eb;
-  --color-accent-hover: #1d4ed8;
+  --color-accent:   #1b998b;
+  --color-accent-hover: #158075;
   --color-border:   #e5e7eb;
   --font:           'Inter', system-ui, sans-serif;
   --radius:         12px;
@@ -94,6 +94,8 @@ body {
   transition: color 0.2s;
 }
 .nav__links a:hover { color: var(--color-text); }
+.nav__links .btn { color: #fff; }
+.nav__links .btn:hover { color: #fff; }
 
 /* ── Hero ── */
 .hero {
@@ -157,7 +159,7 @@ body {
 }
 .section__label {
   display: inline-block;
-  background: #eff6ff;
+  background: #e8f7f5;
   color: var(--color-accent);
   font-size: 0.75rem;
   font-weight: 600;
