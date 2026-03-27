@@ -149,6 +149,16 @@ body {
   margin-right: auto;
 }
 
+#typewriter::after {
+  content: '|';
+  animation: blink 0.7s step-end infinite;
+  margin-left: 1px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 /* ── Sections ── */
 .section { padding: 88px 0; }
 .section--alt { background: var(--color-bg-alt); }

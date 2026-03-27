@@ -25,7 +25,7 @@
   <div class="container hero__inner">
     <div class="hero__tag">Data Engineer · Conseil &amp; Mise en œuvre</div>
     <h1 class="hero__title">Vos données sont là.<br/>Faisons-en quelque chose d'utile.</h1>
-    <p class="hero__subtitle">J'aide les PMEs à organiser leur data, fiabiliser leurs indicateurs et gagner du temps sur leurs opérations — pour piloter leur activité avec clarté.</p>
+    <p class="hero__subtitle">J'aide les PMEs à<br><span id="typewriter"></span></p>
     <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--lg">Discuter de votre situation →</a>
   </div>
 </section>
@@ -171,4 +171,34 @@
   </div>
 </footer>
 
+<script>
+  const phrases = [
+    "organiser leur data.",
+    "fiabiliser leurs indicateurs.",
+    "gagner du temps sur leurs opérations.",
+    "piloter leur activité avec clarté."
+  ];
+  const el = document.getElementById("typewriter");
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+
+  function tick() {
+    const phrase = phrases[phraseIndex];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ++charIndex);
+      if (charIndex === phrase.length) {
+        deleting = true;
+        setTimeout(tick, 1800);
+        return;
+      }
+    } else {
+      el.textContent = phrase.slice(0, --charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(tick, deleting ? 20 : 70);
+  }
+  tick();
+</script>
 {{ end }}
