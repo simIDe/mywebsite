@@ -110,7 +110,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 15, 40, 0.62);
+  background: linear-gradient(160deg, rgba(27,153,139,0.55), rgba(26,26,46,0.80));
 }
 .hero__inner {
   max-width: 760px;
@@ -139,6 +139,7 @@ body {
   letter-spacing: -0.02em;
   margin-bottom: 20px;
   color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 .hero__subtitle {
   font-size: 1.15rem;
@@ -149,6 +150,10 @@ body {
   margin-right: auto;
 }
 
+#typewriter {
+  display: inline-block;
+  min-height: 1.4em;
+}
 #typewriter::after {
   content: '|';
   animation: blink 0.7s step-end infinite;
