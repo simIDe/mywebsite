@@ -1,13 +1,13 @@
 {{ define "main" }}
 {{ $cal := .Site.Params.calendarURL }}
-{{ $li  := .Site.Params.linkedinURL }}
-{{ $gh  := .Site.Params.githubURL }}
+{{ $li := .Site.Params.linkedinURL }}
+{{ $gh := .Site.Params.githubURL }}
 
 <!-- NAV -->
 <header class="nav">
   <div class="container nav__inner">
     <a href="/" class="nav__logo">
-      <img src="{{ "images/photo_pro_smile.jpg" | relURL }}" alt="Simon Bastide" class="nav__avatar" />
+      <img src="{{ " images/photo_pro_smile.jpg" | relURL }}" alt="Simon Bastide" class="nav__avatar" />
       Simon Bastide
     </a>
     <nav class="nav__links">
@@ -21,10 +21,10 @@
 </header>
 
 <!-- HERO -->
-<section class="hero" style="background-image: url('{{ "images/backgroud_first_section.jpg" | relURL }}')">
+<section class="hero" style="background-image: url('{{ " images/backgroud_first_section.jpg" | relURL }}')">
   <div class="container hero__inner">
     <div class="hero__tag">Data Engineer · Conseil &amp; Mise en œuvre</div>
-    <h1 class="hero__title">Vos données sont là.<br/>Faisons-en quelque chose d'utile.</h1>
+    <h1 class="hero__title">Vos données sont là.<br />Faisons-en quelque chose d'utile.</h1>
     <p class="hero__subtitle">J'aide les PMEs à<br><span id="typewriter"></span></p>
     <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--lg">Discuter de votre situation →</a>
   </div>
@@ -47,7 +47,8 @@
       <div class="card">
         <div class="card__icon">⏱️</div>
         <h3>Trop de temps perdu</h3>
-        <p>Rapports manuels, exports récurrents, saisies redondantes : des heures chaque semaine sur des tâches évitables.</p>
+        <p>Rapports manuels, exports récurrents, saisies redondantes : des heures chaque semaine sur des tâches
+          évitables.</p>
       </div>
       <div class="card">
         <div class="card__icon">⚠️</div>
@@ -106,7 +107,8 @@
     <div class="section__header">
       <span class="section__label section__label--light">Ma différence</span>
       <h2>Au-delà de la technique</h2>
-      <p>Un doctorat apprend à poser les bonnes questions avant de construire quoi que ce soit. J'applique cette rigueur à chaque projet.</p>
+      <p>Un doctorat apprend à poser les bonnes questions avant de construire quoi que ce soit. J'applique cette rigueur
+        à chaque projet.</p>
     </div>
     <div class="diff-cards">
       <div class="diff-card">
@@ -135,22 +137,32 @@
       <span class="section__label">À propos</span>
       <h2>Simon Bastide</h2>
       <p>Je traduis vos problèmes data en solutions concrètes.</p>
-      <p>Data Engineer Full-Stack, j'accompagne les PMEs depuis le diagnostic jusqu'à la mise en œuvre. Je construis des systèmes qui fonctionnent, qui durent, et qui vous rendent autonomes.</p>
-      <p>Issu de la recherche académique — doctorat en biomécanique et sciences du mouvement — j'ai appris à résoudre des problèmes complexes avec méthode. Je mets ces compétences au service d'une approche pragmatique, pour des résultats concrets sur le terrain.</p>
+      <p>Data Engineer Full-Stack, j'accompagne les PMEs depuis le diagnostic jusqu'à la mise en œuvre. Je construis des
+        systèmes qui fonctionnent, qui durent, et qui vous rendent autonomes.</p>
+      <p>Issu de la recherche académique — doctorat en biomécanique et sciences du mouvement — j'ai appris à résoudre
+        des problèmes complexes avec méthode. Je mets ces compétences au service d'une approche pragmatique, pour des
+        résultats concrets sur le terrain.</p>
       <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--lg">Prendre rendez-vous →</a>
       <div class="social-links">
         <a href="{{ $li }}" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
           LinkedIn
         </a>
         <a href="{{ $gh }}" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
           GitHub
         </a>
       </div>
     </div>
     <div class="about__photo">
-      <img src="{{ "images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide en Norvège" class="about__photo-img" />
+      <img src="{{ " images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide en Norvège"
+        class="about__photo-img" />
     </div>
   </div>
 </section>
@@ -161,10 +173,16 @@
     <span>© {{ now.Year }} Simon Bastide</span>
     <div class="footer__social">
       <a href="{{ $li }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer__social-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+        </svg>
       </a>
       <a href="{{ $gh }}" target="_blank" rel="noopener" aria-label="GitHub" class="footer__social-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+        </svg>
       </a>
     </div>
     <a href="{{ $cal }}" target="_blank" rel="noopener">Discuter de votre situation →</a>
@@ -173,7 +191,8 @@
 
 <script>
   const phrases = [
-    "organiser leur data.",
+    "organiser leurs données.",
+    "automatiser leurs processus.",
     "fiabiliser leurs indicateurs.",
     "gagner du temps sur leurs opérations.",
     "piloter leur activité avec clarté."
