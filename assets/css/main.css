@@ -1,7 +1,7 @@
 /* ─────────────────────────────────────────────────────────────
    simonbastide.com — un article, pas une vitrine.
    Tout en terminal : JetBrains Mono auto-hébergée, filets francs.
-   Pas de JS, pas de tiers, pas d'ombre, pas d'arrondi.
+   Pas de tiers, pas d'ombre, pas d'arrondi. Un seul script, pour le halo.
    ───────────────────────────────────────────────────────────── */
 
 @font-face {
@@ -25,6 +25,7 @@
   --muted:  #6d6d6d;
   --rule:   #e0e0e0;
   --accent: #c31435;
+  --glow:   rgba(195, 20, 53, 0.45);
 
   --mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
@@ -44,6 +45,7 @@
     --muted:  #949491;
     --rule:   #333331;
     --accent: #f08097;
+    --glow:   rgba(240, 128, 151, 0.55);
   }
 }
 
@@ -122,11 +124,14 @@ a:hover { background: var(--accent); color: var(--paper); border-color: transpar
   width: var(--rail);
   text-align: right;
   margin: 0;
-  color: var(--rule);
+  color: var(--muted);
   font-weight: 400;
 }
 
-.fig, .t1, .ladder { margin-left: calc(-1 * (var(--rail) + var(--rail-gap))); }
+.fig, .t1, .ladder, .rules {
+  margin-left: calc(-1 * (var(--rail) + var(--rail-gap)));
+  width: calc(100% + var(--rail) + var(--rail-gap));
+}
 
 p { margin-bottom: 1rem; }
 .abstract p,
@@ -203,7 +208,7 @@ p { margin-bottom: 1rem; }
 }
 
 /* ── Figures ── */
-.fig { margin: 2.5rem 0; }
+.fig { margin-block: 2.5rem; }
 figcaption {
   font-size: 0.78rem;
   line-height: 1.5;
@@ -255,7 +260,6 @@ figcaption {
 
 /* ── Table 1 ── */
 .t1 {
-  width: 100%;
   border-collapse: collapse;
   font-size: 0.84rem;
   line-height: 1.5;
@@ -297,16 +301,16 @@ figcaption {
 .t1__row--current th, .t1__row--current td { color: var(--accent); }
 
 /* ── Règles (3.x) ── */
-.rules { list-style: none; margin: 1.4rem 0 1.9rem; }
+.rules { list-style: none; margin-block: 1.4rem 1.9rem; }
 .rules li {
   display: grid;
-  grid-template-columns: 2.9rem 1fr;
-  gap: 0.5rem;
+  grid-template-columns: calc(var(--rail) + var(--rail-gap)) 1fr;
+  gap: 0;
   padding: 0.45rem 0;
   font-size: 0.97rem;
 }
 .rules li + li { border-top: 1px solid var(--rule); }
-.rules__num { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+.rules__num { font-size: 0.72rem; color: var(--muted); text-align: right; padding-right: var(--rail-gap); }
 
 /* ── Échelle des solutions ── */
 .ladder {
@@ -314,10 +318,9 @@ figcaption {
   font-size: 0.74rem;
   line-height: 2.1;
   color: var(--muted);
-  margin: 1.1rem 0 1.6rem;
+  margin-block: 1.1rem 1.6rem;
 }
 .ladder__step { color: var(--ink); }
-.ladder__step:first-of-type { color: var(--accent); font-weight: 700; }
 .ladder__sep { margin: 0 0.5rem; color: var(--rule); }
 
 /* ── Travaux en cours ── */
@@ -396,11 +399,43 @@ figcaption {
     color: var(--muted);
   }
 
-  .rules li { grid-template-columns: 2.4rem 1fr; }
+  .rules li { grid-template-columns: 2.6rem 1fr; }
+  .rules__num { padding-right: 0.6rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Animations. Deux seulement, lentes, sans déplacement :
+   le parcours de l'échelle, et un halo qui traverse les mots-clés.
+   JetBrains Mono étant à chasse fixe, passer en gras ne décale rien.
+   ───────────────────────────────────────────────────────────── */
+
+/* L'échelle : le terme actif avance d'un barreau à la fois */
+@keyframes ladder-step {
+  0%,  2%  { color: var(--ink); text-shadow: none; }
+  4%,  14% { color: var(--accent); text-shadow: 0 0 14px var(--glow); }
+  17%, 100% { color: var(--ink); text-shadow: none; }
+}
+.ladder__step {
+  animation: ladder-step 8.4s linear infinite;
+  animation-delay: calc((var(--s) - 1) * 1.4s);
+}
+
+/* Les mots-clés : un halo les traverse un par un, dans l'ordre du texte */
+@keyframes kw-glow {
+  0%, 100% { color: inherit; text-shadow: none; }
+  3%, 6%   { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
+}
+.kw {
+  animation-name: kw-glow;
+  animation-duration: calc(var(--kw-count, 30) * 0.42s);
+  animation-delay: calc(var(--i, 0) * 0.42s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .ladder__step, .kw { animation: none; }
 }
 
 /* ── Impression ── */
