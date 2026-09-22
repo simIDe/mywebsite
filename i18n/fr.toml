@@ -13,7 +13,7 @@ keywords = "data engineering · automatisation · systèmes · IA appliquée · 
 s1_title = "Position"
 s1_p1 = """Une thèse en biomécanique produit des données sales. Des capteurs qui dérivent, du bruit, des artefacts, des volumes qui ne tiennent pas dans les outils du laboratoire. J’ai passé beaucoup de temps à construire de quoi les traiter, et je me suis aperçu que ce travail m’intéressait plus que le sujet de recherche."""
 s1_p2 = """Ça ne s’est jamais arrêté. En ESN, les modèles attendaient que la donnée soit exploitable. Dans une PME, l’analyse attendait qu’une infrastructure existe — on ne fait pas de data science sans avoir fait le data engineering d’abord. Aujourd’hui, l’automatisation attend qu’on ait compris comment l’organisation fonctionne vraiment."""
-s1_p3 = """Ce que j’aime, au fond, c’est construire des systèmes : du code, de l’automatisation, des organisations qui tournent correctement."""
+s1_p3 = """Ce que j’aime, au fond, c’est construire des systèmes : du code, de l’automatisation, des organisations qui tournent correctement. J’aime les organisations bien rangées ; je ne suis pas moi-même très rangé."""
 
 pullquote = "Toute automatisation, c’est de la manipulation de données."
 
@@ -78,7 +78,7 @@ s3_8_body = """Une bonne décision peut produire un mauvais résultat. Je cherch
 # 4. Travaux en cours
 s4_title = "Travaux en cours"
 s4_iota_label = "IOTA"
-s4_iota_body = """Avec Gaël Cambon, nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier — parfois aucune technologie."""
+s4_iota_body = """Nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier — parfois aucune technologie."""
 s4_news_label = "Newsletter"
 s4_news_body = "J’écris sur la donnée, la science, et ce que je lis."
 
@@ -87,15 +87,9 @@ s5_title = "Contact"
 contact_meeting = "Prendre rendez-vous"
 fig2_caption = "L’auteur, Norvège, 2025."
 
-# Notes et références
-notes_title = "Notes"
-note_1 = "J’aime les organisations bien rangées. Je ne suis pas moi-même très rangé."
-refs_title = "Références"
-ref_1 = "Bastide, S. (2021). Adaptation du mouvement humain à de nouvelles dynamiques gravito-inertielles induites par l’interaction avec un exosquelette de membre supérieur actionné. Thèse de doctorat, Université Paris-Saclay."
-ref_2 = "Duke, A. (2018). Thinking in Bets. Portfolio."
-ref_3 = "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Random House."
-
 # Divers
+thesis_link = "Thèse de doctorat (HAL)"
+
 fig_label = "Fig."
 table_label = "Table"
 skip_link = "Aller au contenu"

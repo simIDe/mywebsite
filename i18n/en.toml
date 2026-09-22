@@ -13,7 +13,7 @@ keywords = "data engineering · automation · systems · applied AI · biomechan
 s1_title = "Position"
 s1_p1 = """A biomechanics PhD produces messy data. Drifting sensors, noise, artefacts, volumes that will not fit through the lab’s tools. I spent a great deal of time building what was needed to process it, and realised that this work interested me more than the research subject."""
 s1_p2 = """It never stopped. At a consultancy, the models were waiting for the data to become usable. In a small company, the analysis was waiting for an infrastructure to exist — you cannot do data science before doing the data engineering. Today, automation is waiting for someone to understand how the organisation really runs."""
-s1_p3 = """What I like, underneath all of it, is building systems: code, automation, organisations that run properly."""
+s1_p3 = """What I like, underneath all of it, is building systems: code, automation, organisations that run properly. I like well-ordered organisations; I am not especially well-ordered myself."""
 
 pullquote = "All automation is data manipulation."
 
@@ -78,7 +78,7 @@ s3_8_body = """A good decision can produce a bad outcome. So I look less for the
 # 4. Current work
 s4_title = "Current work"
 s4_iota_label = "IOTA"
-s4_iota_body = """With Gaël Cambon, we help businesses and local government find where they lose time, money or reliability, then build the simplest thing that fixes it. Automation, data, AI where AI is the right lever — and sometimes no technology at all."""
+s4_iota_body = """We help businesses and local government find where they lose time, money or reliability, then build the simplest thing that fixes it. Automation, data, AI where AI is the right lever — and sometimes no technology at all."""
 s4_news_label = "Newsletter"
 s4_news_body = "I write about data, science, and what I read."
 
@@ -87,15 +87,9 @@ s5_title = "Contact"
 contact_meeting = "Book a call"
 fig2_caption = "The author, Norway, 2025."
 
-# Notes and references
-notes_title = "Notes"
-note_1 = "I like well-ordered organisations. I am not especially well-ordered myself."
-refs_title = "References"
-ref_1 = "Bastide, S. (2021). Adaptation du mouvement humain à de nouvelles dynamiques gravito-inertielles induites par l’interaction avec un exosquelette de membre supérieur actionné. PhD thesis, Université Paris-Saclay."
-ref_2 = "Duke, A. (2018). Thinking in Bets. Portfolio."
-ref_3 = "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Random House."
-
 # Misc
+thesis_link = "PhD thesis (HAL)"
+
 fig_label = "Fig."
 table_label = "Table"
 skip_link = "Skip to content"
