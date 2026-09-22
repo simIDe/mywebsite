@@ -1,0 +1,101 @@
+# Toutes les chaînes du site, version française.
+# La structure vit dans layouts/index.html ; seules les chaînes changent d’une langue à l’autre.
+
+role = "data engineer · Cévennes, France"
+
+abstract_label = "Résumé"
+abstract_body = """Data engineer. J’ai découvert la donnée pendant ma thèse, en essayant de traiter des mesures de mouvement humain trop volumineuses et trop sales pour les outils dont je disposais — et ce problème m’a intéressé plus que la question de recherche elle-même. Depuis, je suis remonté d’un cran à chaque étape : de l’analyse vers la donnée, de la donnée vers l’infrastructure, de l’infrastructure vers le fonctionnement des organisations. Depuis fin 2026, je cofonde IOTA, dans les Cévennes."""
+
+keywords_label = "Mots-clés"
+keywords = "data engineering · automatisation · systèmes · IA appliquée · biomécanique · Cévennes"
+
+# 1. Position
+s1_title = "Position"
+s1_p1 = """Une thèse en biomécanique produit des données sales. Des capteurs qui dérivent, du bruit, des artefacts, des volumes qui ne tiennent pas dans les outils du laboratoire. J’ai passé beaucoup de temps à construire de quoi les traiter, et je me suis aperçu que ce travail m’intéressait plus que le sujet de recherche."""
+s1_p2 = """Ça ne s’est jamais arrêté. En ESN, les modèles attendaient que la donnée soit exploitable. Dans une PME, l’analyse attendait qu’une infrastructure existe — on ne fait pas de data science sans avoir fait le data engineering d’abord. Aujourd’hui, l’automatisation attend qu’on ait compris comment l’organisation fonctionne vraiment."""
+s1_p3 = """Ce que j’aime, au fond, c’est construire des systèmes : du code, de l’automatisation, des organisations qui tournent correctement."""
+
+pullquote = "Toute automatisation, c’est de la manipulation de données."
+
+# Fig. 1
+fig1_head_left = "ce que je croyais être le sujet"
+fig1_head_right = "ce qui s’est avéré être le travail"
+fig1_r1_ctx = "thèse"
+fig1_r1_believed = "la question de recherche"
+fig1_r1_actual = "traiter des données sales"
+fig1_r2_ctx = "ESN"
+fig1_r2_believed = "le modèle"
+fig1_r2_actual = "rendre la donnée exploitable"
+fig1_r3_ctx = "PME"
+fig1_r3_believed = "l’analyse"
+fig1_r3_actual = "construire l’infrastructure"
+fig1_r4_ctx = "IOTA"
+fig1_r4_believed = "l’outil"
+fig1_r4_actual = "comprendre l’organisation"
+fig1_caption = "À chaque étape, le travail s’est révélé être un cran en amont de là où je le cherchais."
+
+# 2. Parcours
+s2_title = "Parcours"
+t1_h_period = "Période"
+t1_h_context = "Contexte"
+t1_h_work = "Travail"
+t1_r1_period = "2017–2021"
+t1_r1_context = "Doctorat en biomécanique — Université Paris-Saclay"
+t1_r1_work = "Mesure du mouvement humain (EMG, capteurs d’effort, mocap) ; traitement de gros volumes de données bruitées"
+t1_r2_period = "2021–2023"
+t1_r2_context = "Akkodis (ESN) — Toulouse"
+t1_r2_work = "Data science sur données industrielles, missions pour Airbus"
+t1_r3_period = "2023–2026"
+t1_r3_context = "Ergosanté — Cévennes"
+t1_r3_work = "Data engineering et data science ; biomécanique appliquée"
+t1_r4_period = "2026 —"
+t1_r4_context = "IOTA — Cévennes"
+t1_r4_work = "Cofondateur. Automatisation, données et IA pour PME et collectivités"
+t1_caption = "Parcours, par ordre chronologique."
+
+# 3. Méthode
+s3_title = "Méthode"
+s3_intro = "Ces règles viennent de la pratique. Elles servent surtout à m’empêcher de construire trop vite."
+rule_1 = "Une demande n’est pas un problème."
+rule_2 = "Un outil n’est jamais un objectif."
+rule_3 = "Pas de solution avant d’avoir compris le processus réel."
+rule_4 = "Tout problème important a une conséquence mesurable."
+rule_5 = "Supprimer avant d’automatiser."
+rule_6 = "La solution la plus simple qui fonctionne gagne."
+rule_7 = "On peut conclure qu’il ne faut rien construire."
+
+ladder_intro = "L’espace des solutions, dans l’ordre. On s’arrête au premier barreau qui tient."
+ladder_1 = "supprimer"
+ladder_2 = "modifier le processus"
+ladder_3 = "standardiser"
+ladder_4 = "outiller"
+ladder_5 = "automatiser"
+ladder_6 = "data / IA"
+
+s3_8_title = "Décider sous incertitude"
+s3_8_body = """Une bonne décision peut produire un mauvais résultat. Je cherche donc moins la décision qui garantit le succès que celle qui maximise les chances compte tenu de ce que je sais. En pratique : connaître ma perte maximale, préférer ce qui est réversible, tester petit avant d’engager."""
+
+# 4. Travaux en cours
+s4_title = "Travaux en cours"
+s4_iota_label = "IOTA"
+s4_iota_body = """Avec Gaël Cambon, nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier — parfois aucune technologie."""
+s4_news_label = "Newsletter"
+s4_news_body = "J’écris sur la donnée, la science, et ce que je lis."
+
+# 5. Contact
+s5_title = "Contact"
+contact_meeting = "Prendre rendez-vous"
+fig2_caption = "L’auteur, Norvège, 2025."
+
+# Notes et références
+notes_title = "Notes"
+note_1 = "J’aime les organisations bien rangées. Je ne suis pas moi-même très rangé."
+refs_title = "Références"
+ref_1 = "Bastide, S. (2021). Adaptation du mouvement humain à de nouvelles dynamiques gravito-inertielles induites par l’interaction avec un exosquelette de membre supérieur actionné. Thèse de doctorat, Université Paris-Saclay."
+ref_2 = "Duke, A. (2018). Thinking in Bets. Portfolio."
+ref_3 = "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Random House."
+
+# Divers
+fig_label = "Fig."
+table_label = "Table"
+skip_link = "Aller au contenu"

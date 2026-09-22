@@ -2,162 +2,154 @@
 {{ $cal := .Site.Params.calendarURL }}
 {{ $li := .Site.Params.linkedinURL }}
 {{ $gh := .Site.Params.githubURL }}
+{{ $news := .Site.Params.newsletterURL }}
+{{ $thesis := .Site.Params.thesisURL }}
 
-<!-- NAV -->
-<header class="nav">
-  <div class="container nav__inner">
-    <a href="/" class="nav__logo">
-      <img src="{{ "images/photo_pro_smile.jpg" | relURL }}" alt="Simon Bastide" class="nav__avatar" />
-      Simon Bastide
-    </a>
-    <nav class="nav__links">
-      <a href="#iota">IOTA</a>
-      <a href="#apropos">À propos</a>
-      <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--sm">Discuter</a>
+<article class="paper">
+
+  <header class="head">
+    <nav class="lang" aria-label="Langue">
+      {{ range .AllTranslations }}
+      <a href="{{ .Permalink }}" hreflang="{{ .Site.Language.Lang }}"
+        {{ if eq .Site.Language.Lang $.Site.Language.Lang }}aria-current="page"{{ end }}>{{ upper .Site.Language.Lang }}</a>
+      {{ end }}
     </nav>
-  </div>
-</header>
+    <h1 class="head__name">Simon Bastide</h1>
+    <p class="head__role">{{ T "role" }}</p>
+  </header>
 
-<!-- HERO -->
-<section class="hero" style="background-image: url('{{ "images/backgroud_first_section.jpg" | relURL }}')">
-  <div class="container hero__inner">
-    <div class="hero__tag">Data Engineer · Cofondateur de IOTA</div>
-    <h1 class="hero__title">En ce moment, je construis IOTA.</h1>
-    <p class="hero__subtitle">Avec IOTA, j'aide les entreprises et collectivités à<br><span id="typewriter"></span></p>
-    <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--lg">Échanger avec moi →</a>
-  </div>
-</section>
+  <section class="abstract">
+    <h2 class="abstract__label">{{ T "abstract_label" }}</h2>
+    <p>{{ T "abstract_body" }}</p>
+    <p class="keywords"><span class="keywords__label">{{ T "keywords_label" }}</span>{{ T "keywords" }}</p>
+  </section>
 
-<!-- IOTA -->
-<section class="section section--alt" id="iota">
-  <div class="container">
-    <div class="section__header">
-      <span class="section__label">Mon activité actuelle</span>
-      <h2>Je cofonde IOTA, avec Gaël Cambon</h2>
-      <p>IOTA aide les entreprises et collectivités des Cévennes à simplifier leur fonctionnement grâce à
-        l'automatisation, la donnée et l'intelligence artificielle.</p>
-    </div>
-    <div class="cards">
-      <div class="card">
-        <div class="card__icon">⚙️</div>
-        <h3>Automatisation</h3>
-        <p>Transformer les tâches répétitives en processus fiables, qui tournent sans intervention manuelle.</p>
+  <!-- 1. POSITION -->
+  <section class="section" id="position">
+    <h2><span class="section__num">1</span>{{ T "s1_title" }}</h2>
+    <p>{{ T "s1_p1" }}</p>
+    <p>{{ T "s1_p2" }}</p>
+    <p>{{ T "s1_p3" }}<a class="fnref" id="fnref1" href="#fn1" aria-describedby="notes"><sup>1</sup></a></p>
+
+    <p class="pullquote">{{ T "pullquote" }}</p>
+
+    <figure class="fig" id="fig1">
+      <div class="fig1">
+        <div class="fig1__row fig1__row--head">
+          <span class="fig1__year"></span>
+          <span class="fig1__ctx"></span>
+          <span class="fig1__believed">{{ T "fig1_head_left" }}</span>
+          <span class="fig1__arrow"></span>
+          <span class="fig1__actual">{{ T "fig1_head_right" }}</span>
+        </div>
+        {{ range $i, $r := (slice
+            (dict "year" "2017" "k" "r1")
+            (dict "year" "2021" "k" "r2")
+            (dict "year" "2023" "k" "r3")
+            (dict "year" "2026" "k" "r4")) }}
+        <div class="fig1__row{{ if eq $r.k "r4" }} fig1__row--current{{ end }}">
+          <span class="fig1__year">{{ $r.year }}</span>
+          <span class="fig1__ctx">{{ T (printf "fig1_%s_ctx" $r.k) }}</span>
+          <span class="fig1__believed">{{ T (printf "fig1_%s_believed" $r.k) }}</span>
+          <span class="fig1__arrow" aria-hidden="true">→</span>
+          <span class="fig1__actual">{{ T (printf "fig1_%s_actual" $r.k) }}</span>
+        </div>
+        {{ end }}
       </div>
-      <div class="card">
-        <div class="card__icon">📊</div>
-        <h3>Data</h3>
-        <p>Nettoyer, structurer et fiabiliser des données dispersées entre plusieurs outils.</p>
-      </div>
-      <div class="card">
-        <div class="card__icon">🤖</div>
-        <h3>Intelligence artificielle</h3>
-        <p>Intégrer l'IA là où elle fait vraiment gagner du temps, à partir de données solides.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <figcaption><span class="fig__label">{{ T "fig_label" }} 1</span> — {{ T "fig1_caption" }}</figcaption>
+    </figure>
+  </section>
 
-<!-- ABOUT -->
-<section class="section" id="apropos">
-  <div class="container about">
-    <div class="about__text">
-      <span class="section__label">À propos</span>
-      <h2>Simon Bastide</h2>
-      <p>Data Engineer Full-Stack, je cofonde aujourd'hui IOTA avec Gaël Cambon, après plusieurs années à accompagner
-        des PMEs sur leurs données, du diagnostic jusqu'à la mise en œuvre.</p>
-      <p>Issu de la recherche académique — doctorat en biomécanique et sciences du mouvement — j'ai appris à résoudre
-        des problèmes complexes avec méthode. C'est cette rigueur que j'applique aujourd'hui à IOTA, entre technique
-        et terrain.</p>
-      <p>En dehors du travail, on me trouve plutôt en montagne — la photo ci-contre date d'une randonnée en Norvège.</p>
-      <a href="{{ $cal }}" target="_blank" rel="noopener" class="btn btn--lg">Prendre rendez-vous →</a>
-      <div class="social-links">
-        <a href="{{ $li }}" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-          LinkedIn
-        </a>
-        <a href="{{ $gh }}" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-          </svg>
-          GitHub
-        </a>
-        <a href="https://newsletter.simonbastide.com" target="_blank" rel="noopener" class="social-link" aria-label="Newsletter">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-          Newsletter
-        </a>
-      </div>
-    </div>
-    <div class="about__photo">
-      <img src="{{ "images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide en Norvège"
-        class="about__photo-img" />
-    </div>
-  </div>
-</section>
+  <!-- 2. PARCOURS -->
+  <section class="section" id="parcours">
+    <h2><span class="section__num">2</span>{{ T "s2_title" }}</h2>
+    <table class="t1">
+      <caption><span class="fig__label">{{ T "table_label" }} 1</span> — {{ T "t1_caption" }}</caption>
+      <thead>
+        <tr>
+          <th scope="col">{{ T "t1_h_period" }}</th>
+          <th scope="col">{{ T "t1_h_context" }}</th>
+          <th scope="col">{{ T "t1_h_work" }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $r := (slice "r1" "r2" "r3" "r4") }}
+        <tr{{ if eq $r "r4" }} class="t1__row--current"{{ end }}>
+          <th scope="row" data-label="{{ T "t1_h_period" }}">{{ T (printf "t1_%s_period" $r) }}</th>
+          <td data-label="{{ T "t1_h_context" }}">{{ T (printf "t1_%s_context" $r) }}</td>
+          <td data-label="{{ T "t1_h_work" }}">{{ T (printf "t1_%s_work" $r) }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <span>© {{ now.Year }} Simon Bastide</span>
-    <div class="footer__social">
-      <a href="{{ $li }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer__social-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg>
-      </a>
-      <a href="{{ $gh }}" target="_blank" rel="noopener" aria-label="GitHub" class="footer__social-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-        </svg>
-      </a>
-      <a href="https://newsletter.simonbastide.com" target="_blank" rel="noopener" aria-label="Newsletter" class="footer__social-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-        </svg>
-      </a>
-    </div>
-    <a href="{{ $cal }}" target="_blank" rel="noopener">Échanger avec moi →</a>
-  </div>
-</footer>
+  <!-- 3. MÉTHODE -->
+  <section class="section" id="methode">
+    <h2><span class="section__num">3</span>{{ T "s3_title" }}</h2>
+    <p>{{ T "s3_intro" }}</p>
 
-<script>
-  const phrases = [
-    "automatiser leurs tâches répétitives.",
-    "fiabiliser leurs données.",
-    "gagner du temps au quotidien.",
-    "mieux piloter leur activité.",
-    "intégrer l'IA à leurs processus."
-  ];
-  const el = document.getElementById("typewriter");
-  let phraseIndex = 0, charIndex = 0, deleting = false;
+    <ol class="rules">
+      {{ range $i := (seq 7) }}
+      <li><span class="rules__num">3.{{ $i }}</span>{{ T (printf "rule_%d" $i) }}</li>
+      {{ end }}
+    </ol>
 
-  function tick() {
-    const phrase = phrases[phraseIndex];
-    if (!deleting) {
-      el.textContent = phrase.slice(0, ++charIndex);
-      if (charIndex === phrase.length) {
-        deleting = true;
-        setTimeout(tick, 1800);
-        return;
-      }
-    } else {
-      el.textContent = phrase.slice(0, --charIndex);
-      if (charIndex === 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
-    }
-    setTimeout(tick, deleting ? 20 : 70);
-  }
-  tick();
-</script>
+    <p>{{ T "ladder_intro" }}</p>
+    <p class="ladder">
+      {{ range $i := (seq 6) }}
+      <span class="ladder__step">{{ T (printf "ladder_%d" $i) }}</span>{{ if lt $i 6 }}<span class="ladder__sep" aria-hidden="true">→</span>{{ end }}
+      {{ end }}
+    </p>
+
+    <h3><span class="section__num">3.8</span>{{ T "s3_8_title" }}</h3>
+    <p>{{ T "s3_8_body" }}<a class="cite" href="#ref2">[2]</a><a class="cite" href="#ref3">[3]</a></p>
+  </section>
+
+  <!-- 4. TRAVAUX EN COURS -->
+  <section class="section" id="travaux">
+    <h2><span class="section__num">4</span>{{ T "s4_title" }}</h2>
+    <p><span class="lead-in">{{ T "s4_iota_label" }}</span>{{ T "s4_iota_body" }}</p>
+    <p><span class="lead-in">{{ T "s4_news_label" }}</span>{{ T "s4_news_body" }}</p>
+  </section>
+
+  <!-- 5. CONTACT -->
+  <section class="section" id="contact">
+    <h2><span class="section__num">5</span>{{ T "s5_title" }}</h2>
+    <ul class="contact">
+      <li><a href="{{ $li }}" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="{{ $gh }}" rel="me noopener" target="_blank">GitHub</a></li>
+      <li><a href="{{ $news }}" rel="me noopener" target="_blank">Newsletter</a></li>
+      <li><a href="{{ $cal }}" rel="noopener" target="_blank">{{ T "contact_meeting" }}</a></li>
+    </ul>
+
+    <figure class="fig fig--photo" id="fig2">
+      <img src="{{ "images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide, Norvège, 2025" width="240"
+        height="240" loading="lazy" />
+      <figcaption><span class="fig__label">{{ T "fig_label" }} 2</span> — {{ T "fig2_caption" }}</figcaption>
+    </figure>
+  </section>
+
+  <!-- NOTES & RÉFÉRENCES -->
+  <footer class="backmatter">
+    <section class="notes" id="notes">
+      <h2>{{ T "notes_title" }}</h2>
+      <ol class="reflist">
+        <li id="fn1">{{ T "note_1" }} <a class="fnback" href="#fnref1" aria-label="↩">↩</a></li>
+      </ol>
+    </section>
+
+    <section class="refs" id="references">
+      <h2>{{ T "refs_title" }}</h2>
+      <ol class="reflist">
+        <li id="ref1">{{ T "ref_1" }} <a href="{{ $thesis }}" rel="noopener" target="_blank">HAL&nbsp;: tel-03280380</a></li>
+        <li id="ref2">{{ T "ref_2" }}</li>
+        <li id="ref3">{{ T "ref_3" }}</li>
+      </ol>
+    </section>
+
+    <p class="colophon">© {{ now.Year }} Simon Bastide</p>
+  </footer>
+
+</article>
 {{ end }}
