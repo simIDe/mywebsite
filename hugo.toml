@@ -1,7 +1,7 @@
 baseURL = "https://simonbastide.com/"
 enableRobotsTXT = true
 
-defaultContentLanguage = "fr"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
 [params]
@@ -13,23 +13,23 @@ defaultContentLanguageInSubdir = false
   thesisURL = "https://theses.hal.science/tel-03280380/"
 
 [languages]
-  [languages.fr]
-    languageCode = "fr-FR"
-    languageName = "Français"
-    contentDir = "content/fr"
-    weight = 1
-    title = "Simon Bastide — data engineer"
-    [languages.fr.params]
-      description = "Data engineer dans les Cévennes. Parcours, méthode et travaux en cours."
-
   [languages.en]
     languageCode = "en"
     languageName = "English"
     contentDir = "content/en"
-    weight = 2
+    weight = 1
     title = "Simon Bastide — data engineer"
     [languages.en.params]
       description = "Data engineer based in the Cévennes, France. Background, method and current work."
+
+  [languages.fr]
+    languageCode = "fr-FR"
+    languageName = "Français"
+    contentDir = "content/fr"
+    weight = 2
+    title = "Simon Bastide — data engineer"
+    [languages.fr.params]
+      description = "Data engineer dans les Cévennes. Parcours, méthode et travaux en cours."
 
 [taxonomies]
 

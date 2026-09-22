@@ -5,17 +5,36 @@
 {{ $news := .Site.Params.newsletterURL }}
 {{ $thesis := .Site.Params.thesisURL }}
 
-<article class="paper">
+{{ $sections := slice
+    (dict "id" "position" "num" "1" "key" "s1_title")
+    (dict "id" "background" "num" "2" "key" "s2_title")
+    (dict "id" "method" "num" "3" "key" "s3_title")
+    (dict "id" "work" "num" "4" "key" "s4_title")
+    (dict "id" "contact" "num" "5" "key" "s5_title") }}
 
-  <header class="head">
-    <nav class="lang" aria-label="Langue">
-      {{ range .AllTranslations }}
+<nav class="topbar" aria-label="{{ T "nav_label" }}">
+  <div class="topbar__inner">
+    <a class="topbar__name" href="#top">Simon&nbsp;Bastide</a>
+    <ol class="topbar__sections">
+      {{ range $sections }}
+      <li><a href="#{{ .id }}"><span class="topbar__num">{{ .num }}</span>{{ T .key }}</a></li>
+      {{ end }}
+    </ol>
+    <div class="topbar__lang">
+      {{ range $.AllTranslations }}
       <a href="{{ .Permalink }}" hreflang="{{ .Site.Language.Lang }}"
         {{ if eq .Site.Language.Lang $.Site.Language.Lang }}aria-current="page"{{ end }}>{{ upper .Site.Language.Lang }}</a>
       {{ end }}
-    </nav>
+    </div>
+  </div>
+</nav>
+
+<article class="paper" id="top">
+
+  <header class="head">
     <h1 class="head__name">Simon Bastide</h1>
     <p class="head__role">{{ T "role" }}</p>
+    <p class="head__meta">{{ T "updated_label" }} {{ now.Format "2006-01-02" }}</p>
   </header>
 
   <section class="abstract">
@@ -61,7 +80,7 @@
   </section>
 
   <!-- 2. PARCOURS -->
-  <section class="section" id="parcours">
+  <section class="section" id="background">
     <h2><span class="section__num">2</span>{{ T "s2_title" }}</h2>
     <table class="t1">
       <caption><span class="fig__label">{{ T "table_label" }} 1</span> — {{ T "t1_caption" }}</caption>
@@ -85,7 +104,7 @@
   </section>
 
   <!-- 3. MÉTHODE -->
-  <section class="section" id="methode">
+  <section class="section" id="method">
     <h2><span class="section__num">3</span>{{ T "s3_title" }}</h2>
     <p>{{ T "s3_intro" }}</p>
 
@@ -107,7 +126,7 @@
   </section>
 
   <!-- 4. TRAVAUX EN COURS -->
-  <section class="section" id="travaux">
+  <section class="section" id="work">
     <h2><span class="section__num">4</span>{{ T "s4_title" }}</h2>
     <p><span class="lead-in">{{ T "s4_iota_label" }}</span>{{ T "s4_iota_body" }}</p>
     <p><span class="lead-in">{{ T "s4_news_label" }}</span>{{ T "s4_news_body" }}</p>
