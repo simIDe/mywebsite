@@ -320,12 +320,18 @@ figcaption {
 /* ── Échelle des solutions ── */
 .ladder {
   font-family: var(--mono);
-  font-size: 0.74rem;
-  line-height: 2.1;
+  font-size: 0.8rem;
+  line-height: 2.4;
   color: var(--muted);
   margin-block: 1.1rem 1.6rem;
 }
-.ladder__step { color: var(--ink); }
+.ladder__step {
+  color: var(--ink);
+  white-space: nowrap;
+  /* le fond déborde un peu sans décaler le texte */
+  padding: 0.2em 0.4em;
+  margin: 0 -0.4em;
+}
 .ladder__sep { margin: 0 0.5rem; color: var(--rule); }
 
 /* ── Travaux en cours ── */
@@ -414,15 +420,20 @@ figcaption {
    JetBrains Mono étant à chasse fixe, passer en gras ne décale rien.
    ───────────────────────────────────────────────────────────── */
 
-/* L'échelle : le terme actif avance d'un barreau à la fois */
+/* L'échelle : un bloc de sélection de terminal avance d'un barreau à la
+   fois. Fond plein et texte inversé — rien à voir avec le halo des
+   mots-clés, et bien plus lisible. */
 @keyframes ladder-step {
-  0%,  2%  { color: var(--ink); text-shadow: none; }
-  4%,  14% { color: var(--accent); text-shadow: 0 0 14px var(--glow); }
-  17%, 100% { color: var(--ink); text-shadow: none; }
+  0%   { background: transparent; color: var(--ink); }
+  3%   { background: var(--accent); color: var(--paper); }
+  17%  { background: transparent; color: var(--ink); }
+  100% { background: transparent; color: var(--ink); }
 }
+/* steps(1, end) : chaque palier tient sa valeur puis bascule d'un coup —
+   le bloc s'allume et s'éteint net, sans fondu. */
 .ladder__step {
-  animation: ladder-step 8.4s linear infinite;
-  animation-delay: calc((var(--s) - 1) * 1.4s);
+  animation: ladder-step 9.6s steps(1, end) infinite;
+  animation-delay: calc((var(--s) - 1) * 1.6s);
 }
 
 /* Les mots-clés : chacun s'allume pour son compte. Le script tire au sort la
