@@ -48,7 +48,7 @@
     <h2><span class="section__num">1</span>{{ T "s1_title" }}</h2>
     <p>{{ T "s1_p1" }}</p>
     <p>{{ T "s1_p2" }}</p>
-    <p>{{ T "s1_p3" }}<a class="fnref" id="fnref1" href="#fn1" aria-describedby="notes"><sup>1</sup></a></p>
+    <p>{{ T "s1_p3" }}</p>
 
     <p class="pullquote">{{ T "pullquote" }}</p>
 
@@ -101,6 +101,7 @@
         {{ end }}
       </tbody>
     </table>
+    <p class="aside"><a href="{{ $thesis }}" rel="noopener" target="_blank">{{ T "thesis_link" }}</a></p>
   </section>
 
   <!-- 3. MÉTHODE -->
@@ -122,7 +123,7 @@
     </p>
 
     <h3><span class="section__num">3.8</span>{{ T "s3_8_title" }}</h3>
-    <p>{{ T "s3_8_body" }}<a class="cite" href="#ref2">[2]</a><a class="cite" href="#ref3">[3]</a></p>
+    <p>{{ T "s3_8_body" }}</p>
   </section>
 
   <!-- 4. TRAVAUX EN COURS -->
@@ -149,24 +150,7 @@
     </figure>
   </section>
 
-  <!-- NOTES & RÉFÉRENCES -->
   <footer class="backmatter">
-    <section class="notes" id="notes">
-      <h2>{{ T "notes_title" }}</h2>
-      <ol class="reflist">
-        <li id="fn1">{{ T "note_1" }} <a class="fnback" href="#fnref1" aria-label="↩">↩</a></li>
-      </ol>
-    </section>
-
-    <section class="refs" id="references">
-      <h2>{{ T "refs_title" }}</h2>
-      <ol class="reflist">
-        <li id="ref1">{{ T "ref_1" }} <a href="{{ $thesis }}" rel="noopener" target="_blank">HAL&nbsp;: tel-03280380</a></li>
-        <li id="ref2">{{ T "ref_2" }}</li>
-        <li id="ref3">{{ T "ref_3" }}</li>
-      </ol>
-    </section>
-
     <p class="colophon">© {{ now.Year }} Simon Bastide</p>
   </footer>
 
