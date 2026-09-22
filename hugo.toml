@@ -18,7 +18,7 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     contentDir = "content/en"
     weight = 1
-    title = "Simon Bastide — data engineer"
+    title = "Simon Bastide - data engineer"
     [languages.en.params]
       description = "Data engineer based in the Cévennes, France. Background, method and current work."
 
@@ -27,7 +27,7 @@ defaultContentLanguageInSubdir = false
     languageName = "Français"
     contentDir = "content/fr"
     weight = 2
-    title = "Simon Bastide — data engineer"
+    title = "Simon Bastide - data engineer"
     [languages.fr.params]
       description = "Data engineer dans les Cévennes. Parcours, méthode et travaux en cours."
 

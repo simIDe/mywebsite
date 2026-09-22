@@ -4,7 +4,7 @@
 role = "data engineer · Cévennes, France"
 
 abstract_label = "Résumé"
-abstract_body = """Data engineer. J’ai découvert la donnée pendant ma thèse, en essayant de traiter des mesures de mouvement humain trop volumineuses et trop sales pour les outils dont je disposais — et ce problème m’a intéressé plus que la question de recherche elle-même. Depuis, je suis remonté d’un cran à chaque étape : de l’analyse vers la donnée, de la donnée vers l’infrastructure, de l’infrastructure vers le fonctionnement des organisations. Depuis fin 2026, je cofonde IOTA, dans les Cévennes."""
+abstract_body = """Data engineer. J’ai découvert la donnée pendant ma thèse, en essayant de traiter des mesures de mouvement humain trop volumineuses et trop sales pour les outils dont je disposais - et ce problème m’a intéressé plus que la question de recherche elle-même. Depuis, je suis remonté d’un cran à chaque étape : de l’analyse vers la donnée, de la donnée vers l’infrastructure, de l’infrastructure vers le fonctionnement des organisations. Depuis fin 2026, je cofonde IOTA, dans les Cévennes."""
 
 keywords_label = "Mots-clés"
 keywords = "data engineering · automatisation · systèmes · IA appliquée · biomécanique · Cévennes"
@@ -12,7 +12,7 @@ keywords = "data engineering · automatisation · systèmes · IA appliquée · 
 # 1. Position
 s1_title = "Position"
 s1_p1 = """Une thèse en biomécanique produit des données sales. Des capteurs qui dérivent, du bruit, des artefacts, des volumes qui ne tiennent pas dans les outils du laboratoire. J’ai passé beaucoup de temps à construire de quoi les traiter, et je me suis aperçu que ce travail m’intéressait plus que le sujet de recherche."""
-s1_p2 = """Ça ne s’est jamais arrêté. En ESN, les modèles attendaient que la donnée soit exploitable. Dans une PME, l’analyse attendait qu’une infrastructure existe — on ne fait pas de data science sans avoir fait le data engineering d’abord. Aujourd’hui, l’automatisation attend qu’on ait compris comment l’organisation fonctionne vraiment."""
+s1_p2 = """Ça ne s’est jamais arrêté. En ESN, les modèles attendaient que la donnée soit exploitable. Dans une PME, l’analyse attendait qu’une infrastructure existe - on ne fait pas de data science sans avoir fait le data engineering d’abord. Aujourd’hui, l’automatisation attend qu’on ait compris comment l’organisation fonctionne vraiment."""
 s1_p3 = """Ce que j’aime, au fond, c’est construire des systèmes : du code, de l’automatisation, des organisations qui tournent correctement. J’aime les organisations bien rangées ; je ne suis pas moi-même très rangé."""
 
 pullquote = "Toute automatisation, c’est de la manipulation de données."
@@ -40,16 +40,16 @@ t1_h_period = "Période"
 t1_h_context = "Contexte"
 t1_h_work = "Travail"
 t1_r1_period = "2017–2021"
-t1_r1_context = "Doctorat en biomécanique — Université Paris-Saclay"
+t1_r1_context = "Doctorat en biomécanique - Université Paris-Saclay"
 t1_r1_work = "Mesure du mouvement humain (EMG, capteurs d’effort, mocap) ; traitement de gros volumes de données bruitées"
 t1_r2_period = "2021–2023"
-t1_r2_context = "Akkodis (ESN) — Toulouse"
+t1_r2_context = "Akkodis (ESN) - Toulouse"
 t1_r2_work = "Data science sur données industrielles, missions pour Airbus"
 t1_r3_period = "2023–2026"
-t1_r3_context = "Ergosanté — Cévennes"
+t1_r3_context = "Ergosanté - Cévennes"
 t1_r3_work = "Data engineering et data science ; biomécanique appliquée"
-t1_r4_period = "2026 —"
-t1_r4_context = "IOTA — Cévennes"
+t1_r4_period = "2026 -"
+t1_r4_context = "IOTA - Cévennes"
 t1_r4_work = "Cofondateur. Automatisation, données et IA pour PME et collectivités"
 t1_caption = "Parcours, par ordre chronologique."
 
@@ -78,7 +78,7 @@ s3_8_body = """Une bonne décision peut produire un mauvais résultat. Je cherch
 # 4. Travaux en cours
 s4_title = "Travaux en cours"
 s4_iota_label = "IOTA"
-s4_iota_body = """Nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier — parfois aucune technologie."""
+s4_iota_body = """Nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier - parfois aucune technologie."""
 s4_news_label = "Newsletter"
 s4_news_body = "J’écris sur la donnée, la science, et ce que je lis."
 
