@@ -1,10 +1,10 @@
 baseURL = "https://simonbastide.com/"
 languageCode = "fr-FR"
-title = "Simon Bastide — Data Engineer"
+title = "Simon Bastide — Cofondateur de IOTA"
 enableRobotsTXT = true
 
 [params]
-  description = "Data et pilotage pour les PMEs"
+  description = "Data Engineer, je cofonde IOTA : automatisation, data et IA pour les entreprises et collectivités."
   author = "Simon Bastide"
   calendarURL = "https://calendar.app.google/rAskRjaNbP3C2a3Y6"
   linkedinURL = "https://www.linkedin.com/in/simonbastide/"
