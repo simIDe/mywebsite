@@ -99,3 +99,5 @@ ref_3 = "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Rando
 fig_label = "Fig."
 table_label = "Table"
 skip_link = "Aller au contenu"
+nav_label = "Sections"
+updated_label = "mis à jour"
