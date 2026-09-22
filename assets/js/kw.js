@@ -30,8 +30,15 @@
   var SKIP_TAG = /^(A|H1|H2|H3|CAPTION|SCRIPT|STYLE|NAV)$/;
   var SKIP_CLASS = /(^|\s)(ladder|topbar|section__num|fig__label)(\s|$)/;
 
+  // Envelopper un mot dans un conteneur grid ou flex y créerait un élément de
+  // plus, qui serait projeté dans la cellule suivante. On laisse ces nœuds.
+  var LAYOUT = /^(grid|flex|inline-grid|inline-flex)$/;
+
   function skipped(node) {
-    for (var p = node.parentElement; p && p !== root; p = p.parentElement) {
+    var parent = node.parentElement;
+    if (!parent) return true;
+    if (LAYOUT.test(getComputedStyle(parent).display)) return true;
+    for (var p = parent; p && p !== root; p = p.parentElement) {
       if (SKIP_TAG.test(p.tagName) || SKIP_CLASS.test(p.className)) return true;
     }
     return false;
