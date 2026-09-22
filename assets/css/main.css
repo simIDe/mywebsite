@@ -428,14 +428,17 @@ figcaption {
 /* Les mots-clés : chacun s'allume pour son compte. Le script tire au sort la
    durée et la phase de chaque mot, d'où des chevauchements et aucun cycle
    commun ; ce qui suit ne fixe que la forme du halo. */
+/* Le mot reste éteint l'essentiel du cycle : la montée, la tenue et la
+   descente tiennent dans les huit derniers pour cent. */
 @keyframes kw-glow {
-  0%, 100% { color: inherit; text-shadow: none; }
-  4%, 8%   { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
+  0%, 92%  { color: inherit; text-shadow: none; }
+  95%, 97% { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
+  100%     { color: inherit; text-shadow: none; }
 }
 .kw {
   animation-name: kw-glow;
-  animation-duration: 14s; /* remplacé par le script, mot par mot */
-  animation-timing-function: linear;
+  animation-duration: 32s; /* remplacé par le script, mot par mot */
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 

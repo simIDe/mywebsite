@@ -78,7 +78,8 @@
 
   function decorate(span) {
     // Durées distinctes : les cycles dérivent et ne se resynchronisent jamais.
-    var seconds = 10 + Math.random() * 9;
+    // Un mot ne s'allume qu'une fois par cycle, d'où de longs silences.
+    var seconds = 32 + Math.random() * 24;
     span.style.animationDuration = seconds.toFixed(2) + "s";
     // Phase négative : chaque mot démarre déjà entamé, à un point au hasard.
     span.style.animationDelay = "-" + (Math.random() * seconds).toFixed(2) + "s";
