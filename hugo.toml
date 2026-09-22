@@ -1,14 +1,35 @@
 baseURL = "https://simonbastide.com/"
-languageCode = "fr-FR"
-title = "Simon Bastide — Cofondateur de IOTA"
 enableRobotsTXT = true
 
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
 [params]
-  description = "Data Engineer, je cofonde IOTA : automatisation, data et IA pour les entreprises et collectivités."
   author = "Simon Bastide"
   calendarURL = "https://calendar.app.google/rAskRjaNbP3C2a3Y6"
   linkedinURL = "https://www.linkedin.com/in/simonbastide/"
-  githubURL   = "https://github.com/simIDe"
+  githubURL = "https://github.com/simIDe"
+  newsletterURL = "https://newsletter.simonbastide.com"
+  thesisURL = "https://theses.hal.science/tel-03280380/"
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    languageName = "Français"
+    contentDir = "content/fr"
+    weight = 1
+    title = "Simon Bastide — data engineer"
+    [languages.fr.params]
+      description = "Data engineer dans les Cévennes. Parcours, méthode et travaux en cours."
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+    title = "Simon Bastide — data engineer"
+    [languages.en.params]
+      description = "Data engineer based in the Cévennes, France. Background, method and current work."
 
 [taxonomies]
 

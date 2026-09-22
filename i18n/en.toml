@@ -1,0 +1,101 @@
+# Every string on the site, English version.
+# Structure lives in layouts/index.html; only the strings change between languages.
+
+role = "data engineer · Cévennes, France"
+
+abstract_label = "Abstract"
+abstract_body = """Data engineer. I came to data during my PhD, trying to process human movement recordings that were too large and too messy for the tools I had — and that problem turned out to interest me more than the research question itself. Since then I have moved one step upstream at every stage: from analysis to data, from data to infrastructure, from infrastructure to how organisations actually work. Since late 2026 I have been building IOTA, in the Cévennes."""
+
+keywords_label = "Keywords"
+keywords = "data engineering · automation · systems · applied AI · biomechanics · Cévennes"
+
+# 1. Position
+s1_title = "Position"
+s1_p1 = """A biomechanics PhD produces messy data. Drifting sensors, noise, artefacts, volumes that will not fit through the lab’s tools. I spent a great deal of time building what was needed to process it, and realised that this work interested me more than the research subject."""
+s1_p2 = """It never stopped. At a consultancy, the models were waiting for the data to become usable. In a small company, the analysis was waiting for an infrastructure to exist — you cannot do data science before doing the data engineering. Today, automation is waiting for someone to understand how the organisation really runs."""
+s1_p3 = """What I like, underneath all of it, is building systems: code, automation, organisations that run properly."""
+
+pullquote = "All automation is data manipulation."
+
+# Fig. 1
+fig1_head_left = "what I thought the subject was"
+fig1_head_right = "what the work turned out to be"
+fig1_r1_ctx = "PhD"
+fig1_r1_believed = "the research question"
+fig1_r1_actual = "processing messy data"
+fig1_r2_ctx = "consultancy"
+fig1_r2_believed = "the model"
+fig1_r2_actual = "making the data usable"
+fig1_r3_ctx = "SME"
+fig1_r3_believed = "the analysis"
+fig1_r3_actual = "building the infrastructure"
+fig1_r4_ctx = "IOTA"
+fig1_r4_believed = "the tool"
+fig1_r4_actual = "understanding the organisation"
+fig1_caption = "At every stage, the work turned out to be one step upstream of where I was looking for it."
+
+# 2. Background
+s2_title = "Background"
+t1_h_period = "Period"
+t1_h_context = "Context"
+t1_h_work = "Work"
+t1_r1_period = "2017–2021"
+t1_r1_context = "PhD in biomechanics — Université Paris-Saclay"
+t1_r1_work = "Human movement measurement (EMG, force sensors, motion capture); processing large volumes of noisy data"
+t1_r2_period = "2021–2023"
+t1_r2_context = "Akkodis (consultancy) — Toulouse"
+t1_r2_work = "Data science on industrial data, assignments for Airbus"
+t1_r3_period = "2023–2026"
+t1_r3_context = "Ergosanté — Cévennes"
+t1_r3_work = "Data engineering and data science; applied biomechanics"
+t1_r4_period = "2026 —"
+t1_r4_context = "IOTA — Cévennes"
+t1_r4_work = "Co-founder. Automation, data and AI for small businesses and local government"
+t1_caption = "Background, in chronological order."
+
+# 3. Method
+s3_title = "Method"
+s3_intro = "These rules come from practice. Mostly they exist to stop me from building too early."
+rule_1 = "A request is not a problem."
+rule_2 = "A tool is never a goal."
+rule_3 = "No solution before understanding the real process."
+rule_4 = "Any problem worth solving has a measurable consequence."
+rule_5 = "Remove before automating."
+rule_6 = "The simplest solution that works wins."
+rule_7 = "Concluding that nothing should be built is a valid outcome."
+
+ladder_intro = "The solution space, in order. Stop at the first rung that holds."
+ladder_1 = "remove"
+ladder_2 = "change the process"
+ladder_3 = "standardise"
+ladder_4 = "give them a tool"
+ladder_5 = "automate"
+ladder_6 = "data / AI"
+
+s3_8_title = "Deciding under uncertainty"
+s3_8_body = """A good decision can produce a bad outcome. So I look less for the decision that guarantees success than for the one that maximises the odds given what I know. In practice: know my maximum loss, prefer what is reversible, and test small before committing."""
+
+# 4. Current work
+s4_title = "Current work"
+s4_iota_label = "IOTA"
+s4_iota_body = """With Gaël Cambon, we help businesses and local government find where they lose time, money or reliability, then build the simplest thing that fixes it. Automation, data, AI where AI is the right lever — and sometimes no technology at all."""
+s4_news_label = "Newsletter"
+s4_news_body = "I write about data, science, and what I read."
+
+# 5. Contact
+s5_title = "Contact"
+contact_meeting = "Book a call"
+fig2_caption = "The author, Norway, 2025."
+
+# Notes and references
+notes_title = "Notes"
+note_1 = "I like well-ordered organisations. I am not especially well-ordered myself."
+refs_title = "References"
+ref_1 = "Bastide, S. (2021). Adaptation du mouvement humain à de nouvelles dynamiques gravito-inertielles induites par l’interaction avec un exosquelette de membre supérieur actionné. PhD thesis, Université Paris-Saclay."
+ref_2 = "Duke, A. (2018). Thinking in Bets. Portfolio."
+ref_3 = "Taleb, N. N. (2012). Antifragile: Things That Gain from Disorder. Random House."
+
+# Misc
+fig_label = "Fig."
+table_label = "Table"
+skip_link = "Skip to content"
