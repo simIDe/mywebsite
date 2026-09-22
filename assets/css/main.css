@@ -425,15 +425,16 @@ figcaption {
   animation-delay: calc((var(--s) - 1) * 1.4s);
 }
 
-/* Les mots-clés : un halo les traverse un par un, dans l'ordre du texte */
+/* Les mots-clés : chacun s'allume pour son compte. Le script tire au sort la
+   durée et la phase de chaque mot, d'où des chevauchements et aucun cycle
+   commun ; ce qui suit ne fixe que la forme du halo. */
 @keyframes kw-glow {
   0%, 100% { color: inherit; text-shadow: none; }
-  3%, 6%   { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
+  4%, 8%   { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
 }
 .kw {
   animation-name: kw-glow;
-  animation-duration: calc(var(--kw-count, 30) * 0.42s);
-  animation-delay: calc(var(--i, 0) * 0.42s);
+  animation-duration: 14s; /* remplacé par le script, mot par mot */
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
