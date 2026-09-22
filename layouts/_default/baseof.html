@@ -32,5 +32,7 @@
 </head>
 <body>
 {{ block "main" . }}{{ end }}
+{{ $kw := resources.Get "js/kw.js" | minify | fingerprint }}
+<script src="{{ $kw.RelPermalink }}" integrity="{{ $kw.Data.Integrity }}" defer></script>
 </body>
 </html>

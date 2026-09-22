@@ -118,7 +118,7 @@
     <p>{{ T "ladder_intro" }}</p>
     <p class="ladder">
       {{ range $i := (seq 6) }}
-      <span class="ladder__step">{{ T (printf "ladder_%d" $i) }}</span>{{ if lt $i 6 }}<span class="ladder__sep" aria-hidden="true">→</span>{{ end }}
+      <span class="ladder__step" style="--s:{{ $i }}">{{ T (printf "ladder_%d" $i) }}</span>{{ if lt $i 6 }}<span class="ladder__sep" aria-hidden="true">→</span>{{ end }}
       {{ end }}
     </p>
 
