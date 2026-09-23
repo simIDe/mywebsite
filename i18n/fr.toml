@@ -79,8 +79,6 @@ s3_8_body = """Une bonne décision peut produire un mauvais résultat. Je cherch
 s4_title = "Travaux en cours"
 s4_iota_label = "IOTA"
 s4_iota_body = """Nous aidons les entreprises et les collectivités à identifier où elles perdent du temps, de l’argent ou de la fiabilité, puis nous construisons la solution la plus simple qui corrige le problème. Automatisation, données, IA quand c’est le bon levier - parfois aucune technologie."""
-s4_news_label = "Newsletter"
-s4_news_body = "J’écris sur la donnée, la science, et ce que je lis."
 
 # 5. Contact
 s5_title = "Contact"
