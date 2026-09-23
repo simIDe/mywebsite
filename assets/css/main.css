@@ -440,10 +440,10 @@ figcaption {
    durée et la phase de chaque mot, d'où des chevauchements et aucun cycle
    commun ; ce qui suit ne fixe que la forme du halo. */
 /* Le mot reste éteint l'essentiel du cycle : la montée, la tenue et la
-   descente tiennent dans les huit derniers pour cent. */
+   descente tiennent dans les douze derniers pour cent. */
 @keyframes kw-glow {
-  0%, 92%  { color: inherit; text-shadow: none; }
-  95%, 97% { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
+  0%, 88%  { color: inherit; text-shadow: none; }
+  92%, 98% { color: var(--accent); text-shadow: 0 0 16px var(--glow); }
   100%     { color: inherit; text-shadow: none; }
 }
 .kw {
