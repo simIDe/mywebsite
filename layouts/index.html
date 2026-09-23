@@ -1,8 +1,6 @@
 {{ define "main" }}
-{{ $cal := .Site.Params.calendarURL }}
 {{ $li := .Site.Params.linkedinURL }}
 {{ $gh := .Site.Params.githubURL }}
-{{ $news := .Site.Params.newsletterURL }}
 {{ $thesis := .Site.Params.thesisURL }}
 
 {{ $sections := slice
@@ -136,18 +134,18 @@
   <!-- 5. CONTACT -->
   <section class="section" id="contact">
     <h2><span class="section__num">5</span>{{ T "s5_title" }}</h2>
-    <ul class="contact">
-      <li><a href="{{ $li }}" rel="me noopener" target="_blank">LinkedIn</a></li>
-      <li><a href="{{ $gh }}" rel="me noopener" target="_blank">GitHub</a></li>
-      <li><a href="{{ $news }}" rel="me noopener" target="_blank">Newsletter</a></li>
-      <li><a href="{{ $cal }}" rel="noopener" target="_blank">{{ T "contact_meeting" }}</a></li>
-    </ul>
+    <div class="contact-row">
+      <ul class="contact">
+        <li><a href="{{ $li }}" rel="me noopener" target="_blank">LinkedIn</a></li>
+        <li><a href="{{ $gh }}" rel="me noopener" target="_blank">GitHub</a></li>
+      </ul>
 
-    <figure class="fig fig--photo" id="fig2">
-      <img src="{{ "images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide, Norvège, 2025" width="240"
-        height="240" loading="lazy" />
-      <figcaption><span class="fig__label">{{ T "fig_label" }} 2</span> - {{ T "fig2_caption" }}</figcaption>
-    </figure>
+      <figure class="fig fig--photo" id="fig2">
+        <img src="{{ "images/hiking_norway_2025.jpg" | relURL }}" alt="Simon Bastide, Norvège, 2025" width="240"
+          height="240" loading="lazy" />
+        <figcaption><span class="fig__label">{{ T "fig_label" }} 2</span> - {{ T "fig2_caption" }}</figcaption>
+      </figure>
+    </div>
   </section>
 
   <footer class="backmatter">
